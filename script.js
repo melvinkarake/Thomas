@@ -35,17 +35,17 @@
   });
 })();
 
-// Mobiele navigatie (hamburger) met betere toegankelijkheid
+// Mobiele navigatie (hamburger)
 (function () {
   var navToggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
 
   if (!navToggle || !nav) return;
 
-  // Zorg dat nav een id heeft voor aria-controls
   if (!nav.id) {
     nav.id = "hoofdmenu";
   }
+
   navToggle.setAttribute("aria-controls", nav.id);
   navToggle.setAttribute("aria-expanded", "false");
 
@@ -55,9 +55,17 @@
     navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  navToggle.addEventListener("click", function () {
-  var isOpen = nav.classList.toggle("nav-open");
-  navToggle.classList.toggle("is-open", isOpen);
-  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-});
+  // Sluit menu na klik op link op mobiel
+  nav.addEventListener("click", function (event) {
+    var target = event.target;
+    if (
+      target.tagName &&
+      target.tagName.toLowerCase() === "a" &&
+      window.innerWidth < 768
+    ) {
+      nav.classList.remove("nav-open");
+      navToggle.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
 })();
