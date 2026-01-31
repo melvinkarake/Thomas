@@ -1,7 +1,12 @@
-// Huidig jaar in de footer
-document.getElementById("year").textContent = new Date().getFullYear();
+// script.js
 
-// Simpele front-end afhandeling van contactformulier
+// Huidig jaar in de footer
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// Eenvoudige front-end afhandeling van contactformulier
 const form = document.getElementById("contact-form");
 const message = document.getElementById("form-message");
 
@@ -15,7 +20,7 @@ if (form && message) {
 
     if (!naam || !email || !bericht) {
       message.textContent = "Vul alle verplichte velden in (*) voordat je verzendt.";
-      message.style.color = "#c05621"; // donker oranje
+      message.style.color = "#e06623"; // oranje
       return;
     }
 
@@ -25,15 +30,6 @@ if (form && message) {
   });
 }
 
-// Eenvoudige mobiele navigatie (optioneel, nu alleen voor uitbreiding)
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
-
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    nav.classList.toggle("nav-open");
-  });
-}
 // Mobiele navigatie togglen
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
