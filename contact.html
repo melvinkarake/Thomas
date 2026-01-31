@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Rijbegeleiding Thomas Eeklo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Contactgegevens van Rijbegeleiding Thomas in Eeklo: telefoon, e‑mail, adres en contactformulier voor vragen of het plannen van lessen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo">
+        <img src="Thomas.png" alt="Rijbegeleiding Thomas" class="logo-image" />
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="index.html">Home</a>
+        <a href="over.html">Over mij</a>
+        <a href="opleidingen.html">Opleidingen & tarieven</a>
+        <a href="contact.html" class="is-active">Contact</a>
+        <a href="tel:+32473965782" class="nav-cta btn btn-primary">Bel 0473 96 57 82</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <header class="section-header">
+        <p class="section-kicker">Contact</p>
+        <h1 class="section-title">Neem contact op met Rijbegeleiding Thomas</h1>
+        <p class="section-intro">
+          Heb je een vraag over een opleiding of wil je weten wat mogelijk is in jouw situatie?
+          Neem gerust contact op via telefoon, e‑mail of het formulier hieronder.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h2 class="contact-title">Stuur een bericht</h2>
+          <form id="contact-form" class="stack">
+            <div class="field">
+              <label for="naam">Naam *</label>
+              <input id="naam" name="naam" type="text" class="input" required />
+            </div>
+            <div class="field">
+              <label for="email">E‑mail *</label>
+              <input id="email" name="email" type="email" class="input" required />
+            </div>
+            <div class="field">
+              <label for="telefoon">Telefoonnummer</label>
+              <input id="telefoon" name="telefoon" type="tel" class="input" />
+              <p class="field-helper">Vermeld eventueel wanneer je best bereikbaar bent.</p>
+            </div>
+            <div class="field">
+              <label for="bericht">Bericht *</label>
+              <textarea id="bericht" name="bericht" class="textarea" required
+                placeholder="Bijv. autorijlessen, mototraining of opfrissing verkeersreglement…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Verstuur bericht</button>
+            <p id="form-message" class="field-helper"></p>
+          </form>
+        </div>
+
+        <aside class="contact-details" aria-label="Contactgegevens">
+          <div>
+            <p class="detail-group-title">Gegevens</p>
+            <div class="detail-item">
+              <span class="detail-label">Telefoon</span>
+              <span class="detail-value"><a href="tel:+32473965782">0473 96 57 82</a></span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">E‑mail</span>
+              <span class="detail-value"><a href="mailto:info@rijbegeleidingthomas.be">info@rijbegeleidingthomas.be</a></span>
+            </div>
+          </div>
+
+          <div>
+            <p class="detail-group-title">Adres</p>
+            <div class="detail-item">
+              <span class="detail-label">Leslocatie</span>
+              <span class="detail-value">
+                <a href="https://www.google.com/maps/search/?api=1&query=Rijbegeleiding%20Thomas%2C%20Peperstraat%205%2C%209900%20Eeklo%2C%20Belgium"
+                   target="_blank" rel="noopener">
+                  Peperstraat 5<br />9900 Eeklo
+                </a>
+              </span>
+              <span class="map-link">Open de locatie in Google Maps.</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="detail-group-title">Praktisch</p>
+            <p class="detail-text">
+              Tijdens een eerste contactmoment wordt nagegaan welke begeleiding je zoekt
+              en hoe de lessen zo goed mogelijk kunnen worden ingepland.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Rijbegeleiding Thomas – Alle rechten voorbehouden.</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="over.html">Over mij</a>
+      <a href="opleidingen.html">Opleidingen & tarieven</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
