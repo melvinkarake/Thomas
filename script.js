@@ -1,6 +1,4 @@
-// script.js
 
-// Jaar in footer
 (function () {
   var yearSpan = document.getElementById("year");
   if (yearSpan) {
@@ -8,7 +6,6 @@
   }
 })();
 
-// Contactformulier (alleen waar het bestaat)
 (function () {
   var form = document.getElementById("contact-form");
   var message = document.getElementById("form-message");
@@ -34,7 +31,6 @@
   });
 })();
 
-// Mobiele navigatie
 (function () {
   var navToggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
