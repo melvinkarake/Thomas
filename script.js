@@ -55,17 +55,9 @@
     navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  // Sluit menu na klik op een link op mobiel
-  nav.addEventListener("click", function (event) {
-    var target = event.target;
-    if (
-      target.tagName &&
-      target.tagName.toLowerCase() === "a" &&
-      window.innerWidth < 768
-    ) {
-      nav.classList.remove("nav-open");
-      navToggle.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
+  navToggle.addEventListener("click", function () {
+  var isOpen = nav.classList.toggle("nav-open");
+  navToggle.classList.toggle("is-open", isOpen);
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
 })();
