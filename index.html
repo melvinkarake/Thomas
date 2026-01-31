@@ -16,22 +16,32 @@
 <body>
   <!-- Header -->
   <header class="site-header">
-    <div class="site-header-inner">
-      <a href="index.html" class="logo">
-        <img src="Thomas.png" alt="Rijbegeleiding Thomas" class="logo-image" />
+  <div class="site-header-inner">
+    <a href="index.html" class="logo">
+      <img src="Thomas.png" alt="Rijbegeleiding Thomas" class="logo-image">
+    </a>
+
+    <nav class="nav" aria-label="Hoofdmenu">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="over.html">Over mij</a>
+      <a href="opleidingen.html">Opleidingen &amp; tarieven</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:+32473965782" class="nav-cta btn btn-primary">
+        Bel 0473 96 57 82
       </a>
-      <nav class="nav" aria-label="Hoofdmenu">
-        <a href="index.html" class="is-active">Home</a>
-        <a href="over.html">Over mij</a>
-        <a href="opleidingen.html">Opleidingen & tarieven</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:+32473965782" class="nav-cta btn btn-primary">Bel 0473 96 57 82</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Menu openen">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    </nav>
+
+    <button class="nav-toggle" type="button"
+            aria-label="Menu openen"
+            aria-controls="hoofdmenu"
+            aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
 
   <main class="page">
     <!-- Hero -->
