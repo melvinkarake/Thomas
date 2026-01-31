@@ -34,3 +34,12 @@ if (navToggle && nav) {
     nav.classList.toggle("nav-open");
   });
 }
+// Mobiele navigatie togglen
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    nav.classList.toggle("nav-open");
+  });
+}
